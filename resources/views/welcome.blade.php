@@ -448,15 +448,25 @@
             margin-bottom: 10px;
         }
 
-        .map-placeholder {
-            min-height: 280px;
+        .location-info .btn-primary {
+            margin-top: 10px;
+            color: white;
+        }
+
+        .map-wrapper {
+            min-height: 320px;
             border-radius: 16px;
-            background: #e2e8f0;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #64748b;
-            font-weight: 700;
+            overflow: hidden;
+            box-shadow: 0 8px 24px rgba(15, 23, 42, .08);
+            border: 1px solid #e2e8f0;
+        }
+
+        .map-wrapper iframe {
+            display: block;
+            width: 100%;
+            height: 100%;
+            min-height: 320px;
+            border: 0;
         }
 
         /* =========================
@@ -873,18 +883,30 @@
                     <h3>Lestari Kost 2</h3>
 
                     <p>
-                        📍 Jl. Simpang Lohbener RT 22/RW 05,
-                        Lohbener, Indramayu
+                        📍 Jl. Simpang Lohbener, Indramayu
                     </p>
 
                     <p>
                         Lokasi strategis dan mudah dijangkau
                         dari berbagai area di sekitar Lohbener.
                     </p>
+
+                    <a href="https://www.google.com/maps/search/?api=1&query=Jl.+Simpang+Lohbener,+Indramayu"
+                       target="_blank"
+                       rel="noopener"
+                       class="btn-primary">
+                        Buka di Google Maps
+                    </a>
                 </div>
 
-                <div class="map-placeholder">
-                    Google Maps
+                <div class="map-wrapper">
+                    <iframe
+                        src="https://www.google.com/maps?q=Jl.+Simpang+Lohbener,+Indramayu&output=embed"
+                        allowfullscreen
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"
+                        title="Lokasi Lestari Kost 2">
+                    </iframe>
                 </div>
 
             </div>
